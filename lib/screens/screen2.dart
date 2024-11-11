@@ -9,14 +9,20 @@ class Screen2 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.all(18.0),
+        padding: const EdgeInsets.all(28),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const Row(
               children: [
                 Row(
-                  children: [Icon(Icons.place_sharp), Text("Bali, Indonesia")],
+                  children: [
+                    Icon(
+                      Icons.place_sharp,
+                      color: Colors.blue,
+                    ),
+                    Text("Bali, Indonesia")
+                  ],
                 ),
                 Spacer(),
                 CircleAvatar(
@@ -27,7 +33,7 @@ class Screen2 extends StatelessWidget {
               ],
             ),
             const SizedBox(
-              height: 20,
+              height: 30,
             ),
             const Text(
               "Exciting things you \ncan do here",
@@ -56,7 +62,7 @@ class Screen2 extends StatelessWidget {
                         const SizedBox(
                           height: 10,
                         ),
-                        Text("Surfing")
+                        const Text("Surfing")
                       ],
                     ),
                   ),
@@ -76,13 +82,13 @@ class Screen2 extends StatelessWidget {
                           height: 20,
                         ),
                         Image.asset(
-                          "assets/surfing.png",
+                          "assets/hiking.png",
                           height: 50,
                         ),
                         const SizedBox(
                           height: 10,
                         ),
-                        Text("Surfing")
+                        const Text("Hiking")
                       ],
                     ),
                   ),
@@ -102,21 +108,37 @@ class Screen2 extends StatelessWidget {
                           height: 20,
                         ),
                         Image.asset(
-                          "assets/surfing.png",
+                          "assets/camping.png",
                           height: 50,
                         ),
                         const SizedBox(
                           height: 10,
                         ),
-                        Text("Surfing")
+                        const Text("Camping")
                       ],
                     ),
                   ),
                 ],
               ),
             ),
-            const Row(
-              children: [Text("Top Sights"), Spacer(), Text("See all")],
+            const Padding(
+              padding: EdgeInsets.all(20.0),
+              child: Row(
+                children: [
+                  Text(
+                    "Top Sights",
+                    style: TextStyle(fontSize: 21, fontWeight: FontWeight.bold),
+                  ),
+                  Spacer(),
+                  Text(
+                    "See all",
+                    style: TextStyle(
+                        fontSize: 18,
+                        color: Colors.blue,
+                        fontWeight: FontWeight.bold),
+                  ),
+                ],
+              ),
             ),
             SingleChildScrollView(
               scrollDirection: Axis.horizontal,
@@ -124,14 +146,16 @@ class Screen2 extends StatelessWidget {
                 children: [
                   GestureDetector(
                     onTap: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => Screen3()));
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const Screen3()));
                     },
                     child: Container(
                       decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(10)),
-                      height: 280,
+                      height: 300,
                       width: 300,
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -139,11 +163,15 @@ class Screen2 extends StatelessWidget {
                           Image.asset("assets/ulun-danu.jpg"),
                           const Padding(
                             padding: EdgeInsets.all(8.0),
-                            child: Text("Ulun Danu Temple"),
+                            child: Text(
+                              "Ulun Danu Temple",
+                              style: TextStyle(
+                                  fontSize: 16, fontWeight: FontWeight.bold),
+                            ),
                           ),
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: const Row(
+                          const Padding(
+                            padding: EdgeInsets.all(8.0),
+                            child: Row(
                               children: [
                                 Row(
                                   children: [
@@ -161,7 +189,12 @@ class Screen2 extends StatelessWidget {
                                       Icons.directions_car,
                                       color: Colors.blue,
                                     ),
-                                    Text("3.5 Km away")
+                                    Text(
+                                      "3.5 Km away",
+                                      style: TextStyle(
+                                          fontSize: 16,
+                                          fontWeight: FontWeight.bold),
+                                    )
                                   ],
                                 )
                               ],
@@ -171,7 +204,7 @@ class Screen2 extends StatelessWidget {
                       ),
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 20,
                   ),
                   Container(
@@ -183,14 +216,18 @@ class Screen2 extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Image.asset("assets/ulun-danu.jpg"),
+                        Image.asset("assets/uluwatu.png"),
                         const Padding(
                           padding: EdgeInsets.all(8.0),
-                          child: Text("Ulun Danu Temple"),
+                          child: Text(
+                            "Uluwatu",
+                            style: TextStyle(
+                                fontSize: 16, fontWeight: FontWeight.bold),
+                          ),
                         ),
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: const Row(
+                        const Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: Row(
                             children: [
                               Row(
                                 children: [
@@ -220,7 +257,13 @@ class Screen2 extends StatelessWidget {
                 ],
               ),
             ),
-            Text("Historical gems"),
+            const Padding(
+              padding: EdgeInsets.all(25.0),
+              child: Text(
+                "Historical Gems",
+                style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+              ),
+            ),
           ],
         ),
       ),

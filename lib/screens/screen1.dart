@@ -8,7 +8,7 @@ class Screen1 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Padding(
-      padding: EdgeInsets.all(80),
+      padding: const EdgeInsets.all(80),
       child: Column(
         children: [
           const Text(
@@ -26,13 +26,13 @@ class Screen1 extends StatelessWidget {
           ElevatedButton(
               onPressed: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => Screen2()));
+                    MaterialPageRoute(builder: (context) => const Screen2()));
               },
               style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.blue,
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(12))),
-              child: Text(
+              child: const Text(
                 "Explore",
                 style:
                     TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
